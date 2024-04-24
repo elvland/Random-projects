@@ -2,7 +2,7 @@ import requests
 import json
 def get_nextMatch_info():
     uri = 'https://api.football-data.org/v4/teams/81/matches?status=SCHEDULED&limit=1'
-    headers = { 'X-Auth-Token': '2ea4579af7fe4f199fc51205d750a0f7' }
+    headers = { 'X-Auth-Token': '' }#api key for apifotball needed
 
     response = requests.get(uri, headers=headers)
     for match in response.json()['matches']:
